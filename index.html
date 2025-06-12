@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Álbum Erasmus</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+    
+  <audio id="bg-music" src="music/recuerdo.mp3" autoplay loop></audio>
+  <div class="music-control">
+    <button onclick="toggleMusic()"><i class="fas fa-music"></i> Música</button>
+  </div>
+
+  <header class="hero">
+    <h1>Recuerdos de un Erasmus inolvidable</h1>
+    <p>Para el mejor grupo que podría haber pedido ❤️</p>
+  </header>
+
+  <section class="section intro">
+    <h2>Los comienzos</h2>
+    <p>Todo empezó con nervios, gente que va y venía, sin embargo, poco a poco nos quedamos los reales.</p>
+    <img src="img/1.jpg" alt="Descripción de la foto" class="gallery-img" />
+  </section>
+
+  <section class="section adventures">
+    <h2>Viajes, fiestas y desmadres</h2>
+    <p>Desde robarle una silla de ruedas a un pobre hombre hasta coger autobuses, trenes y aviones CRIMINALES</p>
+    <div class="photo-grid">
+        <img src="img/2.jpg" alt="Descripción de la foto" class="gallery-img" />
+        <img src="img/3.jpg" alt="Descripción de la foto" class="gallery-img" />
+        <img src="img/4.jpg" alt="Descripción de la foto" class="gallery-img" />
+    </div>
+  </section>
+
+  <section class="section deep">
+    <h2>Muchas momentos vividos en la 1005/1211</h2>
+    <p>Después de exilios, insultos, malentendidos y alguna que otra herida que no dijimos en voz alta, pero no todo fue difícil. También hubo cosas bonitas: ver pelis hasta quedarnos dormidos, reírnos jugando como críos, o simplemente hablar de la vida. Y ahora, estamos en esos silencios compartidos donde entendemos que esto va a doler al terminar.</p>
+    <div class="photo-placeholder">[Foto 5]</div>
+  </section>
+
+  <section class="section gallery">
+    <h2>Nosotros</h2>
+    <p>Para finalizar un pequeño vídeo que he creado!</p>
+    <video></video>
+  </section>
+
+  <section class="section" id="despedida">
+    <h2>Una última imagen para el recuerdo</h2>
+    <div style="text-align: center;">
+        
+      <img src="img/ghibli_style_mobile(1).png" alt="Despedida Erasmus" class="gallery-img" style="max-width: 90%; margin-bottom: 10px;" />
+      <br />
+      <a href="img/ghibli_style_mobile(1).png" download="ErasmusRecuerdo.jpg">
+        <button style="
+          background-color: #fce3dc;
+          border: 1px solid #e0cfc2;
+          color: #6b4c3b;
+          padding: 10px 20px;
+          border-radius: 10px;
+          font-size: 1em;
+          cursor: pointer;
+        ">
+          📥 Descargar imagen
+        </button>
+      </a>
+    </div>
+  </section>
+  
+  <footer>
+    <p>Hecho con cariño por alguien que no quiere olvidar nada de esto. 💌</p>
+  </footer>
+
+  <script>
+    const music = document.getElementById('bg-music');
+    function toggleMusic() {
+      if (music.paused) music.play();
+      else music.pause();
+    }
+  </script>
+</body>
+</html>
