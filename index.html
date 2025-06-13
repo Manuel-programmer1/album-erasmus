@@ -7,52 +7,51 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
 </head>
 <body>
 
-    
-  <audio id="bg-music" src="music/recuerdo.mp3" autoplay loop></audio>
-  <div class="music-control">
-    <button onclick="toggleMusic()"><i class="fas fa-music"></i> Música</button>
-  </div>
 
-  <header class="hero">
+
+  <header class="hero" data-aos="fade-down">
     <h1>Recuerdos de un Erasmus inolvidable</h1>
     <p>Para el mejor grupo que podría haber pedido ❤️</p>
   </header>
 
   <section class="section intro">
-    <h2>Los comienzos</h2>
-    <p>Todo empezó con nervios, gente que va y venía, sin embargo, poco a poco nos quedamos los reales.</p>
-    <img src="img/1.jpg" alt="Descripción de la foto" class="gallery-img" />
+    <h2 data-aos="fade-right">Los comienzos</h2>
+    <p data-aos="fade-up">Todo empezó con nervios, gente que va y venía, sin embargo, poco a poco nos quedamos los reales.</p>
+    <img src="img/1.jpg" alt="Descripción de la foto" class="gallery-img" data-aos="zoom-in" />
   </section>
 
   <section class="section adventures">
-    <h2>Viajes, fiestas y desmadres</h2>
-    <p>Desde robarle una silla de ruedas a un pobre hombre hasta coger autobuses, trenes y aviones CRIMINALES</p>
+    <h2 data-aos="fade-left">Viajes, fiestas y desmadres</h2>
+    <p data-aos="fade-up">Desde robarle una silla de ruedas a un pobre hombre hasta coger autobuses, trenes y aviones CRIMINALES</p>
     <div class="photo-grid">
-        <img src="img/2.jpg" alt="Descripción de la foto" class="gallery-img" />
-        <img src="img/3.jpg" alt="Descripción de la foto" class="gallery-img" />
-        <img src="img/4.jpg" alt="Descripción de la foto" class="gallery-img" />
+        <img src="img/2.jpg" alt="Descripción de la foto" class="gallery-img" data-aos="fade-up" />
+        <img src="img/3.jpg" alt="Descripción de la foto" class="gallery-img" data-aos="fade-up" data-aos-delay="100" />
+        <img src="img/4.jpg" alt="Descripción de la foto" class="gallery-img" data-aos="fade-up" data-aos-delay="200" />
     </div>
   </section>
 
   <section class="section deep">
-    <h2>Muchas momentos vividos en la 1005/1211</h2>
-    <p>Después de exilios, insultos, malentendidos y alguna que otra herida que no dijimos en voz alta, pero no todo fue difícil. También hubo cosas bonitas: ver pelis hasta quedarnos dormidos, reírnos jugando como críos, o simplemente hablar de la vida. Y ahora, estamos en esos silencios compartidos donde entendemos que esto va a doler al terminar.</p>
-    <div class="photo-placeholder">[Foto 5]</div>
+    <h2 data-aos="fade-right">Muchos momentos vividos en la 1211</h2>
+    <p data-aos="fade-up">Después de exilios, insultos, malentendidos y alguna que otra herida que no dijimos en voz alta, pero no todo fue difícil. También hubo cosas bonitas: ver pelis hasta quedarnos dormidos, reírnos jugando como críos, o simplemente hablar de la vida. Y ahora, estamos en esos silencios compartidos donde entendemos que esto va a doler al terminar.</p>
+    <div class="photo-placeholder" data-aos="zoom-in">[Foto 5]</div>
   </section>
 
   <section class="section gallery">
-    <h2>Nosotros</h2>
-    <p>Para finalizar un pequeño vídeo que he creado!</p>
-    <video></video>
+    <h2 data-aos="fade-left">Nosotros</h2>
+    <p data-aos="fade-up">Para finalizar un pequeño vídeo que he creado!</p>
+    <video data-aos="zoom-in" controls style="max-width: 100%; border-radius: 10px;">
+      <source src="img/video.mp4" type="video/mp4">
+      Tu navegador no soporta el video.
+    </video>
   </section>
 
   <section class="section" id="despedida">
-    <h2>Una última imagen para el recuerdo</h2>
-    <div style="text-align: center;">
-        
+    <h2 data-aos="fade-up">Una última imagen para el recuerdo</h2>
+    <div style="text-align: center;" data-aos="zoom-in">
       <img src="img/ghibli_style_mobile(1).png" alt="Despedida Erasmus" class="gallery-img" style="max-width: 90%; margin-bottom: 10px;" />
       <br />
       <a href="img/ghibli_style_mobile(1).png" download="ErasmusRecuerdo.jpg">
@@ -71,16 +70,16 @@
     </div>
   </section>
   
-  <footer>
+  <footer data-aos="fade-in">
     <p>Hecho con cariño por alguien que no quiere olvidar nada de esto. 💌</p>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    const music = document.getElementById('bg-music');
-    function toggleMusic() {
-      if (music.paused) music.play();
-      else music.pause();
-    }
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
   </script>
 </body>
 </html>
